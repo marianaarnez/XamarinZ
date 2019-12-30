@@ -6,7 +6,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout
-                Padding="5"
+                Padding="15"
                 BackgroundColor="White">
                 <Image Source=" " />
                 <Grid>
@@ -57,6 +57,7 @@
                 TextColor="White"
                 BackgroundColor="PeachPuff" 
                 Command="{Binding LoginCommand,Mode=TwoWay}"
+                IsEnabled="{Binding IsEnabled}"
                         
                 />
 
