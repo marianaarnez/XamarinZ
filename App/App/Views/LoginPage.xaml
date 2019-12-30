@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             x:Class="App.Views.LoginPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                Padding="5"
+                BackgroundColor="White">
+                <Image Source=" " />
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="Email"
+                        TextColor="Black"
+                        
+                     />
+
+                    <Entry
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Text="{Binding Email,Mode=TwoWay}"
+                        Placeholder="Ingrese su correo"
+                     />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="Password"
+                        TextColor="Black"
+                     />
+
+                    <Entry
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        IsPassword="True"
+                        Text="{Binding Password,Mode=TwoWay}"
+                        Placeholder="Ingrese su clave" 
+                     />
+
+
+                </Grid>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning}"
+                />
+
+
+
+                <Button 
+                Text="Login"
+                TextColor="White"
+                BackgroundColor="PeachPuff" 
+                Command="{Binding LoginCommand,Mode=TwoWay}"
+                        
+                />
+
+           </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
